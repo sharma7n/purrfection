@@ -1,0 +1,45 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    background: #EE8262;
+    color: #F5F5DC;
+}
+
+a,h1,h2 {
+    color: #EEEEE0;
+}
+
+h1,h2 {
+    margin: 0;
+}
+
+h1 {
+    border-bottom: 2px solid #856363;
+}
+
+h2 {
+    font-size: 1.2em;
+}
+
+input {
+    border: 1px solid #EEC591;
+    background: #F5DEB3;
+}
+
+.page {
+    margin: 2em auto;
+    width: 35em;
+    border: 5px solid #856363;
+    padding: .8em;
+    background: #6F4242;
+}
+
+.flash {
+    background: #98A148;
+    padding: .5em;
+    border: 1px solid #aacbe2;
+}
+
+.error {
+    background: #98A148;
+    padding: .5em;
+}

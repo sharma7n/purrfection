@@ -1,0 +1,5 @@
+{% extends "base.html" %}
+{% block content %}
+Your account was successfully created. Please click the link below to confirm your email address and activate your account:<br>
+<p><a href="{{ confirm_url }}">{{ confirm_url }}</a></p>
+{% endblock %}
