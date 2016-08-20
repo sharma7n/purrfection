@@ -4,9 +4,10 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__, instance_relative_config=True)
+app = Flask(__name__)
 app.config.from_object('config')
-app.config.from_pyfile('config.py')
+app.config.from_envvar('SECRET_CONFIG')
+# app.config.from_pyfile('config.py')
 db = SQLAlchemy(app)
 
 from .users import signup, confirm, login, logout
