@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }} - purrfection</title>
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet"
+    type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="page">
+
+        <div id="top">
+            <h1 id="title"><a href="{{ url_for('index') }}"><em>purr</em>fection</a></h1>
+            <span id="userinfo">
+            {% if current_user.is_authenticated %}
+                Hello, {{ current_user.email }}! <a href="{{ url_for('logout') }}">Logout</a>.<br>
+                <a href="{{ url_for('my_profile') }}">My Profile</a>
+            {% else %}
+                <a href="{{ url_for('signup') }}">Sign up</a> or <a href="{{ url_for('login') }}">log in</a>.
+            {% endif %}
+            </span>
+        </div>
+
+        <div class="info">
+        {% for message in get_flashed_messages() %}
+            <div class="flash">
+                {{ message }}
+            </div>
+        {% endfor %}
+        </div>
+
+        <div class="content">{% block content %}{% endblock %}</div>
+    </div>
+</body>
+</html>

@@ -1,1 +1,1 @@
-web: python purrfection.py
+web: python manage.py run

@@ -1,0 +1,7 @@
+<h2>Send a meowssage!</h2>
+<form action="{{ url_for('view_profile', name=name) }}" method="POST">
+	{{ form.body.label }}<br>
+	{{ form.body }}<br>
+	{{ form.csrf_token }}<br>
+	<input type=submit value='Send'/>
+</form>

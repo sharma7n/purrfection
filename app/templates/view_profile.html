@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+	{% if profile %}
+		<h2>{{ profile.name }}'s Profile</h2><br>
+		<p>{{ profile.about_me }}</p>
+
+		{% if current_user.is_authenticated %}
+			{% with name=profile.name %}
+			{% include "message.html" %}
+			{% endwith %}
+		{% endif %}
+		
+	{% else %}
+		<p>No profile was found!</p>
+	{% endif %}
+	
+{% endblock %}

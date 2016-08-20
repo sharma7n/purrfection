@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+
+	{% if messages %}
+		{% for message in messages %}
+			<p>{{ message.body }}</p><br>
+		{% endfor %}
+	{% else %}
+		<p>No meowssages! :(</p>
+	{% endif %}
+
+{% endblock %}

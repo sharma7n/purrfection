@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Edit my profile</h2>
+<form action="{{ url_for('edit_profile') }}" method="POST" enctype="multipart/form-data">
+	{{ form.name.label }}: {{ form.name }}<br>
+	{{ form.about_me.label }}: {{ form.about_me }}<br>
+	{{ form.csrf_token }}
+	<input type=submit value='Save'/>
+</form>
+{% endblock %}

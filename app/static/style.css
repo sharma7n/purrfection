@@ -12,12 +12,17 @@ h1,h2 {
     margin: 0;
 }
 
-h1 {
-    border-bottom: 2px solid #856363;
-}
-
 h2 {
     font-size: 1.2em;
+}
+
+form{
+    align-content: center;
+}
+
+label {
+    display: inline-block;
+    text-align: right;
 }
 
 input {
@@ -42,4 +47,18 @@ input {
 .error {
     background: #98A148;
     padding: .5em;
+}
+
+#top {
+    border-bottom: 2px solid #856363;
+}
+
+#title {
+    display: inline;
+    text-decoration: none;
+}
+
+#userinfo {
+    float: right;
+    display: inline;
 }
